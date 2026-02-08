@@ -410,6 +410,37 @@
             transform: translateY(-10px);
         }
 
+        .timeline-icon-container {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--accent-color);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-icon {
+            width: 32px;
+            height: 32px;
+            fill: none;
+            stroke: var(--accent-color);
+            stroke-width: 1.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            transition: all 0.3s ease;
+        }
+        
+        .timeline-item:hover .timeline-icon-container {
+            background-color: var(--accent-color);
+        }
+        
+        .timeline-item:hover .timeline-icon {
+            stroke: var(--white);
+        }
+        
         .time {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2rem;
@@ -587,21 +618,50 @@
             <div class="timeline">
                 
                 <div class="timeline-item">
+                    <div class="timeline-icon-container">
+                        <svg class="timeline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 21s-8-5.5-8-10a8 8 0 0 1 16 0c0 4.5-8 10-8 10z"/>
+                            <path d="M12 8v6"/>
+                            <circle cx="12" cy="16" r="1"/>
+                        </svg>
+                    </div>
                     <span class="time">12:40</span>
                     <span class="event">Торжественная регистрация в Пушкинском ЗАГСе</span>
                 </div>
 
                 <div class="timeline-item">
+                    <div class="timeline-icon-container">
+                        <svg class="timeline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="11" width="18" height="10" rx="2"/>
+                            <circle cx="12" cy="5" r="2"/>
+                            <path d="M12 7v4"/>
+                            <circle cx="8" cy="20" r="1"/>
+                            <circle cx="16" cy="20" r="1"/>
+                        </svg>
+                    </div>
                     <span class="time">15:00</span>
                     <span class="event">Приезд в усадьбу Белово. Welcome zone. Фотосессия</span>
                 </div>
 
                 <div class="timeline-item">
+                    <div class="timeline-icon-container">
+                        <svg class="timeline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18V5l12-2v13"/>
+                            <circle cx="6" cy="18" r="3"/>
+                            <circle cx="18" cy="16" r="3"/>
+                        </svg>
+                    </div>
                     <span class="time">16:00</span>
                     <span class="event">Основная программа</span>
                 </div>
 
                 <div class="timeline-item">
+                    <div class="timeline-icon-container">
+                        <svg class="timeline-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
                     <span class="time">21:00</span>
                     <span class="event">Танцы на закате</span>
                 </div>
